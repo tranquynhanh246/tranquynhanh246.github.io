@@ -1,3 +1,4 @@
+
 <?php include_once 'Student.php' ;
     $header = "id,name,age";
     $filename = "../assets/text/student.txt";
@@ -9,9 +10,10 @@
     $arraySt = explode($remove, $content);
     fclose($file);
 ?>
-<?php 
-    class StudentDAO {
-        private $studentArray = [];
+<?php
+class StudentDAO
+{
+    private $studentArray = [];
 
         public function readStudent():void{
             global $arraySt;
@@ -55,6 +57,7 @@
             return $this->studentArray;
         }
 
+
         public function save(){
             $temp = '';
             global $header;
@@ -67,5 +70,5 @@
             fwrite($myfile, $header.$temp);
             fclose($myfile);
         }
-    }
+}
 ?>
