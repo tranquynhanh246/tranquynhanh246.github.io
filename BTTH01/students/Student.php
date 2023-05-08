@@ -35,6 +35,5 @@ class Student
     public function setAge($age)
     {
         $this->age = $age;
-    }
-}
+ 
 ?>
