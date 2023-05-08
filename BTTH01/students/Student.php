@@ -1,4 +1,4 @@
-<?php
+<?ph
 class Student
 {
     private $id;
@@ -36,4 +36,10 @@ class Student
     {
         $this->age = $age;
     }
+    
+    public function toString():string{
+        return $this->getId().','.$this->getName().','.$this->getAge();
+    }
 }
+?>
+
