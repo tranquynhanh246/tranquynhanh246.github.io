@@ -1,7 +1,8 @@
 <?php error_reporting(0); ?> 
 <?php include_once 'Student.php' ;
     $header = "id,name,age";
-    $filename = "assets/text/student.txt";
+    $path = $_SERVER['DOCUMENT_ROOT'];
+    $filename = $path."/THCNWEB/CSE485_2023/BTTH01/assets/text/student.txt";
     $file = fopen($filename, "r");
     $content = fread($file, filesize($filename));
     $remove = "\n";
@@ -15,7 +16,7 @@ class StudentDAO
 
         public function readStudent():void{
             global $arraySt;
-            for ($i=1; $i<count($arraySt)-1; $i++){
+            for ($i=1; $i<count($arraySt); $i++){
                 $infor = explode(",",$arraySt[$i]);
                 $student = new Student($infor[0],$infor[1],$infor[2]);
                 array_push($this->studentArray, $student);
@@ -65,7 +66,6 @@ class StudentDAO
             foreach($this->studentArray as $student){
                 $temp .= "\n".$student->toString();
             }
-            echo $header.$temp;
             fwrite($myfile, $header.$temp);
             fclose($myfile);
         }
