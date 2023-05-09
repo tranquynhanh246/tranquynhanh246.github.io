@@ -4,3 +4,5 @@ id,name,age
 3,Michael Johnson,11
 4,Emily Davis,12
 5,James Rodriguez,14
+6,Nguyen Quang Huy,18
+8,Ronaldo,99

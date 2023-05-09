@@ -1,9 +1,28 @@
 <?php
 require_once('students/StudentDAO.php');
 require_once('students/Student.php');
-
+$msg = '';
+if(isset($_GET['msg'])){
+    $msg = $_GET['msg'];
+}
+$id = '';
+$age = '';
+$name = '';
 $studentsDao = new StudentDAO();
 $studentsDao->readStudent();
+if($_SERVER['REQUEST_METHOD'] == 'POST'){
+    var_dump(123);
+    $id = $_POST['id'];
+    $name = $_POST['name'];
+    $age = $_POST['age'];
+    $error = $studentsDao->createStudent($id, $name, $age);
+    if(!$error){
+        $studentsDao->save();
+        header("Location: index.php?msg=done");
+    }
+    else
+        header('Location: index.php?msg=error');
+}
 $studentList = $studentsDao->getAll();
 ?>
 
@@ -39,15 +58,17 @@ $studentList = $studentsDao->getAll();
     <h1>Form nhập thông tin sinh viên</h1>
     <form method="POST" action="">
         <label for="id">ID:</label><br>
-        <input type="text" id="name" name="name"><br>
+        <input type="text" id="name" name="id"><br>
         <label for="name">Name:</label><br>
         <input type="name" id="name" name="name"><br>
         <label for="age">Age:</label><br>
         <input type="age" id="age" name="age"><br>
         <br>
-        <input type="submit" value="Lưu">
+        <button type="submit">Lưu</button>
     </form>
-
+    <p><?php
+        echo ($msg ? ($msg == 'done' ? "Thêm mới thành công" : "Id đã bị trùng. Vui long nhập một Id khác") : '' );
+    ?></p>
 </body>
 
 </html>
