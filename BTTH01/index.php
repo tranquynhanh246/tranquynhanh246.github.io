@@ -3,6 +3,7 @@ require_once('students/StudentDAO.php');
 require_once('students/Student.php');
 
 $studentsDao = new StudentDAO();
+$studentsDao->readStudent();
 $studentList = $studentsDao->getAll();
 ?>
 
@@ -31,6 +32,7 @@ $studentList = $studentsDao->getAll();
                 <td><?php echo $item->getName(); ?></td>
                 <td><?php echo $item->getAge(); ?></td>
             </tr>
+            
         <?php } ?>
     </table>
 

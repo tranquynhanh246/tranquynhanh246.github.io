@@ -1,12 +1,10 @@
-
+<?php error_reporting(0); ?> 
 <?php include_once 'Student.php' ;
     $header = "id,name,age";
-    $filename = "../assets/text/student.txt";
+    $filename = "assets/text/student.txt";
     $file = fopen($filename, "r");
     $content = fread($file, filesize($filename));
     $remove = "\n";
-    echo $content;
-    echo "<br/>";
     $arraySt = explode($remove, $content);
     fclose($file);
 ?>
@@ -17,9 +15,10 @@ class StudentDAO
 
         public function readStudent():void{
             global $arraySt;
-            for ($i=1; $i<count($arraySt); $i++){
+            for ($i=1; $i<count($arraySt)-1; $i++){
                 $infor = explode(",",$arraySt[$i]);
-                array_push($this->studentArray, new Student($infor[0],$infor[1],$infor[2]));
+                $student = new Student($infor[0],$infor[1],$infor[2]);
+                array_push($this->studentArray, $student);
             }
         }
 
