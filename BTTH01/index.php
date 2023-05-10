@@ -11,7 +11,6 @@ $name = '';
 $studentsDao = new StudentDAO();
 $studentsDao->readStudent();
 if($_SERVER['REQUEST_METHOD'] == 'POST'){
-    var_dump(123);
     $id = $_POST['id'];
     $name = $_POST['name'];
     $age = $_POST['age'];

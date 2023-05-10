@@ -1,8 +1,7 @@
 <?php error_reporting(0); ?> 
 <?php include_once 'Student.php' ;
     $header = "id,name,age";
-    $path = $_SERVER['DOCUMENT_ROOT'];
-    $filename = $path."/THCNWEB/CSE485_2023/BTTH01/assets/text/student.txt";
+    $filename = "assets/text/student.txt";
     $file = fopen($filename, "r");
     $content = fread($file, filesize($filename));
     $remove = "\n";
