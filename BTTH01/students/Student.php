@@ -36,5 +36,12 @@ class Student
     {
         $this->age = $age;
     }
+    public function toString():string{
+        return $this->getId().','.$this->getName().','.$this->getAge();
+    }
 }
 ?>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 6db5d63ace4ae5eda9b06d83d4f657548b51da49

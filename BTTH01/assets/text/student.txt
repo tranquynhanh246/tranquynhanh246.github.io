@@ -3,4 +3,10 @@ id,name,age
 2,Jane Doe,13
 3,Michael Johnson,11
 4,Emily Davis,12
+<<<<<<< HEAD
 5,James Rodriguez,14
+=======
+5,James Rodriguez,14
+6,Nguyen Quang Huy,18
+8,Ronaldo,99
+>>>>>>> 6db5d63ace4ae5eda9b06d83d4f657548b51da49
