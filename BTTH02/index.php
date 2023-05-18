@@ -1,24 +1,37 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-    <title> LOGIN </title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang Đăng nhập</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css">
 </head>
+
 <body>
     <div class="container">
-        <h2> LOGIN </h2>
-        <form method="post" action="process_login.php">
-            <div class="id">
-                <label for="student_id" class="form-label"> Student ID: </label>
-                <input type="text" class="form-control" id="student_id" name="student_id" required>
-            </div>
-            <div class="password">
-                <label for="password" class="form-label"> Password: </label>
-                <input type="password" class="form-control" id="password" name="password" required>
-            </div>
-            <button type="submit" class="btn btn-primary"> Submit </button>
-        </form>
-    </div>
-</body>
-</html>
+        <h1 class="text-center mb-4 text-info">HỆ THỐNG ĐIỂM DANH MÔN HỌC ONLINE</h1>
 
+
+        <div class="row justify-content-center mt-5">
+            <div class="col-12 col-md-6">
+                <h2 class="text-center mb-4">Đăng nhập</h2>
+                <form>
+                    <div class="mb-3">
+                        <label for="username" class="form-label">Tên đăng nhập:</label>
+                        <input type="text" class="form-control" id="username" placeholder="Nhập tên đăng nhập" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="password" class="form-label">Mật khẩu:</label>
+                        <input type="password" class="form-control" id="password" placeholder="Nhập mật khẩu" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Đăng nhập</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
