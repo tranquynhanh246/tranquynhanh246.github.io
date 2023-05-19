@@ -161,7 +161,18 @@
                                             <div class="col-sm-10">
                                                 <select id="course" name="course" class="form-select">
                                                     <option selected>Chọn lớp học phần</option>
-                                                    <option value="ABC101">Công nghệ Web-2-22</option>
+                                                    <option value="">Công nghệ Web-2-22</option>
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <div class="mb-3 row">
+                                            <label for="course" class="col-sm-2 col-form-label">Lớp học chi tiết:</label>
+                                            <div class="col-sm-10">
+                                                <select id="course" name="course" class="form-select">
+                                                    <option selected>Lớp</option>
+                                                    <option value="">62TH2.1</option>
+                                                    <option value="">62TH2.2</option>
                                                 </select>
                                             </div>
                                         </div>

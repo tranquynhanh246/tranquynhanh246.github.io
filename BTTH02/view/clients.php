@@ -8,6 +8,7 @@
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
     <link rel="stylesheet" href="../public/template/admin/plugins/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="../public/template/admin/dist/css/adminlte.min.css">
 </head>
 
@@ -30,10 +31,10 @@
             </ul>
         </nav>
 
-        <aside class="main-sidebar sidebar-dark-primary elevation-4">
+        <aside class="main-sidebar sidebar-white-primary elevation-4">
             <a href="" class="brand-link">
                 <img src="../public/template/admin/dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
-                <span class="brand-text font-weight-light">Sinh Viên</span>
+                <span class="brand-text font-weight-light">Công nghệ Web-2-22</span>
             </a>
 
             <div class="sidebar">
@@ -61,7 +62,7 @@
                                 <li class="nav-item">
                                     <a href="" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
-                                        <p>Khu vực điểm danh 62TH.1</p>
+                                        <p>Khu vực điểm danh 62TH2.1</p>
                                     </a>
                                 </li>
                             </ul>
@@ -69,7 +70,57 @@
                                 <li class="nav-item">
                                     <a href="" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
-                                        <p>Khu vực điểm danh 62TH.2</p>
+                                        <p>Khu vực điểm danh 62TH2.2</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon fa-solid fa-graduation-cap"></i>
+                                <p>
+                                    Slide Bài Giảng
+                                    <i class="right fas fa-angle-left"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Bài 1 - Giới thiệu môn học</p>
+                                    </a>
+                                </li>
+                            </ul>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Bài 2 - Kiến thức cơ bản</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon fa-solid fa-video"></i>
+                                <p>
+                                    Video Hướng Dẫn
+                                    <i class="right fas fa-angle-left"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Cài đặt Nginx, PHP 8, MariaDB</p>
+                                    </a>
+                                </li>
+                            </ul>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Hướng dẫn khởi chạy Nginx</p>
                                     </a>
                                 </li>
                             </ul>
@@ -95,30 +146,67 @@
                     <table class="table table-bordered table-striped">
                         <thead class="table-dark">
                             <tr>
-                                <th>ID</th>
-                                <th>Họ & Tên</th>
-                                <th>Lớp</th>
-                                <th>Lớp Học Phần</th>
                                 <th>Ngày</th>
-                                <th>Trạng Thái</th>
+                                <th>Mô tả</th>
+                                <th>Trạng thái</th>
+                                <th>Lý do</th>
+                                <th>Gửi</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td>1</td>
-                                <td>Nguyễn Văn A</td>
-                                <td>TH2</td>
-                                <td>Công nghệ Web-2-22</td>
-                                <td>10/5/2023</td>
-                                <td>Đi học</td>
+                                <td>
+                                    12/5/2023
+                                    <br />
+                                    1PM - 1:05PM
+                                </td>
+                                <td>Buổi học bình thường</td>
+                                <td>
+                                    <select class="form-select">
+                                        <option>Đi học</option>
+                                        <option>Vắng</option>
+                                    </select>
+                                </td>
+                                <td>...</td>
+                                <td>
+                                    <button type="submit" class="btn btn-primary">Gửi</button>
+                                </td>
                             </tr>
                             <tr>
-                                <td>2</td>
-                                <td>Nguyễn Văn A</td>
-                                <td>TH2</td>
-                                <td>Công nghệ Web-2-22</td>
-                                <td>16/5/2023</td>
-                                <td>Nghỉ Học</td>
+                                <td>
+                                    16/5/2023
+                                    <br />
+                                    1PM - 1:05PM
+                                </td>
+                                <td>Buổi học bình thường</td>
+                                <td>
+                                    <select class="form-select">
+                                        <option>Đi học</option>
+                                        <option>Vắng</option>
+                                    </select>
+                                </td>
+                                <td>...</td>
+                                <td>
+                                    <button type="submit" class="btn btn-primary">Gửi</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    19/5/2023
+                                    <br />
+                                    1PM - 1:05PM
+                                </td>
+                                <td>Buổi học bình thường</td>
+                                <td>
+                                    <select class="form-select">
+                                        <option>Đi học</option>
+                                        <option>Vắng</option>
+                                    </select>
+                                </td>
+                                <td>...</td>
+                                <td>
+                                    <button type="submit" class="btn btn-primary">Gửi</button>
+                                </td>
                             </tr>
 
                         </tbody>
