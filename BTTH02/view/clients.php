@@ -1,3 +1,11 @@
+<?php
+    // require_once('../model/student.php');
+    // $studentModel = new student();
+    // $student = $studentModel->getAll();
+    // echo "<pre>";
+    //     print_r($student);
+    // echo "</pre>";
+?>
 <!DOCTYPE html>
 <html lang="en">
 

@@ -1,3 +1,25 @@
+<?php
+    require_once('model/user.php');
+    $userModel = new user();
+    $user = $userModel->getAll();
+    $username = '';
+    $password = '';
+    if($_SERVER['REQUEST_METHOD'] == 'POST'){
+        $username = $_POST['username'];
+        $password = $_POST['password'];
+        foreach($user as $user){
+            if($user['email'] == $username and $user['password'] == $password){
+                if($user['id_level'] == '1')
+                    header("Location:view/admin.php");
+                else
+                    header("Location:view/clients.php");
+                break;
+            }else{
+                header("Location:index.php");
+            }
+        }
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -16,14 +38,14 @@
         <div class="row justify-content-center mt-5">
             <div class="col-12 col-md-6">
                 <h2 class="text-center mb-4">Đăng nhập</h2>
-                <form>
+                <form method="POST">
                     <div class="mb-3">
                         <label for="username" class="form-label">Tên đăng nhập:</label>
-                        <input type="text" class="form-control" id="username" placeholder="Nhập tên đăng nhập" required>
+                        <input type="text" class="form-control" id="username" placeholder="Nhập tên đăng nhập" name="username" required>
                     </div>
                     <div class="mb-3">
                         <label for="password" class="form-label">Mật khẩu:</label>
-                        <input type="password" class="form-control" id="password" placeholder="Nhập mật khẩu" required>
+                        <input type="password" class="form-control" name="password" id="password" placeholder="Nhập mật khẩu" required>
                     </div>
                     <button type="submit" class="btn btn-primary">Đăng nhập</button>
                 </form>
