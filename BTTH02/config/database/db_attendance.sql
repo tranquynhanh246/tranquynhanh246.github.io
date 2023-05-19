@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 18, 2023 at 06:32 PM
+-- Generation Time: May 19, 2023 at 12:02 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -36,6 +36,15 @@ CREATE TABLE `attendance` (
   `id_SV` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Dumping data for table `attendance`
+--
+
+INSERT INTO `attendance` (`ID`, `days`, `status`, `id_GV`, `id_courseClass`, `id_SV`) VALUES
+(1, '2023-05-19', 'Đi học', 1, 1, 1),
+(2, '2023-05-19', 'Đi học', 1, 1, 2),
+(3, '2023-05-19', 'Vắng', 1, 1, 3);
+
 -- --------------------------------------------------------
 
 --
@@ -43,8 +52,6 @@ CREATE TABLE `attendance` (
 --
 
 CREATE TABLE `class` (
-  `ID` int(11) NOT NULL,
-  `className` varchar(50) NOT NULL,
   `id_SV` int(11) DEFAULT NULL,
   `id_courseClass` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
@@ -53,12 +60,12 @@ CREATE TABLE `class` (
 -- Dumping data for table `class`
 --
 
-INSERT INTO `class` (`ID`, `className`, `id_SV`, `id_courseClass`) VALUES
-(1, 'TH2', 1, 1),
-(2, 'TH2', 2, 1),
-(3, 'TH2', 3, 1),
-(4, 'TH2', 4, 1),
-(5, 'TH2', 5, 1);
+INSERT INTO `class` (`id_SV`, `id_courseClass`) VALUES
+(1, 1),
+(2, 1),
+(3, 1),
+(4, 1),
+(5, 1);
 
 -- --------------------------------------------------------
 
@@ -223,6 +230,14 @@ CREATE TABLE `users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`ID`, `name`, `email`, `password`, `phone`, `address`, `create_at`, `update_at`, `id_level`) VALUES
+(1, 'dungkt', 'dungkt@gmail.com', '123456', '0985532356', 'Hà Nội', '2023-05-19', '2023-05-19', 1),
+(2, 'quanlv', 'quanlv@gmail.com', '123456', '0985562258', 'Hà Nội', '2023-05-19', '2023-05-19', 2);
+
+--
 -- Indexes for dumped tables
 --
 
@@ -239,7 +254,6 @@ ALTER TABLE `attendance`
 -- Indexes for table `class`
 --
 ALTER TABLE `class`
-  ADD PRIMARY KEY (`ID`),
   ADD KEY `id_SV` (`id_SV`),
   ADD KEY `id_courseClass` (`id_courseClass`);
 
@@ -298,13 +312,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `attendance`
 --
 ALTER TABLE `attendance`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT for table `class`
---
-ALTER TABLE `class`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `courseclass`
@@ -346,7 +354,7 @@ ALTER TABLE `students`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- Constraints for dumped tables
